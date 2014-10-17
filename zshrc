@@ -1,26 +1,15 @@
 alias ls='ls -G'
+alias mos='cd ~/repos/mid_office_system'
 
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-export PATH="$HOME/.bin:$PATH"
-export PATH="$HOME/.bin:$PATH"
-
+alias zzz='rake db:drop:all && rake db:create && rake db:migrate && rake db:seed'
 
 export PATH="$HOME/.bin:$PATH"
-export PATH="$HOME/.bin:$PATH"
-export PATH="$HOME/.bin:$PATH"
+
 export PATH="$PATH:/usr/local/lib/node_modules"
 source $(brew --prefix nvm)/nvm.sh
 export PATH="$HOME/.rbenv/bin:$PATH"
+
 eval "$(rbenv init - zsh --no-rehash)"
-export PATH="$HOME/.bin:$PATH"
-export PATH="$HOME/.bin:$PATH"
-export PATH="$HOME/.bin:$PATH"
-export PATH="$HOME/.bin:$PATH"
-export PATH="$HOME/.bin:$PATH"
-export PATH="$HOME/.bin:$PATH"
-export PATH="$HOME/.bin:$PATH"
-export PATH="$HOME/.bin:$PATH"
 
 setopt prompt_subst
 autoload -Uz vcs_info
@@ -40,3 +29,5 @@ vcs_info_wrapper() {
   fi
 }
 PROMPT=$'%~$(vcs_info_wrapper):'
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
