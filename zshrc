@@ -1,7 +1,7 @@
 alias ls='ls -G'
-alias mos='cd ~/repos/mid_office_system'
+alias mos='cd ~/g/mid_office_system'
 
-alias zzz='rake db:drop:all && rake db:create && rake db:migrate && rake db:seed'
+alias pp="rake parallel:prepare && rake parallel"
 
 export PATH="$HOME/.bin:$PATH"
 
