@@ -12,7 +12,7 @@ alias g='git'
 alias pa='rake pspec:acceptance'
 alias pr='rake parallel:prepare'
 alias pu='rake pspec:unit'
-alias pp='pr && pu && pa'
+alias pp='rake parallel:prepare && rake parallel'
 alias ss='rake app:reset && scripts/reload_with_staging_db && rake db:migrate && rails s'
 alias sp='rake app:reset && scripts/reload_with_production_db && rake db:migrate && rails s'
 
