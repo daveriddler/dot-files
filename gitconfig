@@ -1,0 +1,25 @@
+[user]
+	name = Owen Byrne
+	email = owen@owenbyrne.me
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[push]
+	default = simple
+[core]
+	excludesfile = /Users/owenb/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[alias]
+	amend = commit -a --amend
+	co    = checkout
+	lg    = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	rbm   = pull --rebase origin master
+	wip   = !git add -A && git commit -m 'WIP' 
+        undo  = reset HEAD~1 --mixed 
+	up    = pull --rebase --prune
+

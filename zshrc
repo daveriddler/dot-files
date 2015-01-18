@@ -9,14 +9,12 @@ alias got='git'
 alias g='git'
 
 # rake
-alias pa='rake pspec:acceptance'
-alias pr='rake parallel:prepare'
-alias pu='rake pspec:unit'
-alias pp='rake parallel:prepare && rake parallel'
-alias ss='rake app:reset && scripts/reload_with_staging_db && rake db:migrate && rails s'
-alias sp='rake app:reset && scripts/reload_with_production_db && rake db:migrate && rails s'
-
 alias clean='rake clobber && git clean -fd'
+alias mt='rake db:migrate RAILS_ENV=test'
+alias ms='rake db:migrate && rails s'
+alias pp='rake parallel:prepare && rake parallel'
+alias sp='scripts/reload_with_production_db && ms'
+alias ss='scripts/reload_with_staging_db && ms'
 
 # PATH STUFF
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
@@ -54,3 +52,4 @@ vcs_info_wrapper() {
   fi
 }
 PROMPT=$'%~$(vcs_info_wrapper):'
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
