@@ -2,27 +2,21 @@
 # fs
 alias ls='ls -G'
 alias mos='cd ~/repos/mid_office_system'
+alias ins='cd ~/repos/insight'
 
 # git
 alias gap='git add --patch'
-alias got='git'
 alias g='git'
 
 # rake
 alias clean='rake clobber && git clean -fd'
 alias mt='rake db:migrate RAILS_ENV=test'
-alias ms='rake db:migrate && rails s'
 alias pp='rake parallel:prepare && rake parallel'
-alias sp='scripts/reload_with_production_db && ms'
-alias ss='scripts/reload_with_staging_db && ms'
 
 # PATH STUFF
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-export PATH="$PATH:$HOME/.bin/scripts"
 export PATH="$HOME/.bin:$PATH"
 export PATH="$PATH:/usr/local/lib/node_modules"
-source $(brew --prefix nvm)/nvm.sh
-export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init - zsh --no-rehash)"
 
 # AUTO COMPLETE
